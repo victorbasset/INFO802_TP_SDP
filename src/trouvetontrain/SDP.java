@@ -29,6 +29,11 @@ public class SDP {
         return (double) Math.round(((getDistance(latitude_v1,longitude_v1,latitude_v2,longitude_v2) / 1000) * 0.18)*100)/100;
     }
 
+    @WebMethod
+    public double getPrice(double distance) {
+        return distance * 0.18;
+    }
+
     private double convertRad(double input){
       return (Math.PI * input)/180;
     }
